@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>🗓️ Reserva</title>
+
+  <!-- Importa o arquivo de estilos -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Ícone da extensão exibido na aba -->
+  <link rel="icon" type="image/png" href="icon128.png">
+</head>
+<body>
+
+  <!-- Título centralizado da extensão -->
+  <h2 id="titulo">Reservar Sala</h2>
+
+  <!-- Formulário principal para entrada de dados -->
+  <div class="form-group">
+    <label for="sala">Número da Sala:</label>
+    <input type="text" id="sala" placeholder="Ex: 101">
+
+    <label for="data">Data:</label>
+    <input type="date" id="data">
+
+    <label for="hora">Hora:</label>
+    <input type="time" id="hora">
+
+    <label for="duracao">Duração (minutos):</label>
+    <input type="number" id="duracao" placeholder="Ex: 30" min="1">
+
+    <label for="finalidade">Finalidade:</label>
+    <input type="text" id="finalidade" placeholder="Ex: Reunião, Aula, etc.">
+
+    <!-- Botões de ação -->
+    <button id="reservar">Salvar Reserva</button>
+    <button id="sincronizar">Sincronizar com Google Calendar</button>
+    <button id="exportar">Exportar para CSV</button>
+  </div>
+
+  <!-- Mensagem de feedback após salvar -->
+  <div id="mensagem"></div>
+
+  <!-- Lista dinâmica de reservas salvas -->
+  <div id="lista-reservas"></div>
+
+  <!-- Resumo inteligente das reservas -->
+  <div id="resumo-reservas"></div>
+
+  <!-- Script principal da extensão -->
+  <script src="popup.js"></script>
+</body>
+</html>
